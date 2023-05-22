@@ -1,0 +1,36 @@
+<form class="flex" [formGroup]="PaymasterForm" (ngSubmit)="onSubmit()">
+    <div class="flex-1 surface-card p-4 shadow-2 border-round w-full lg:w-6">
+        <div class="text-center mb-5">
+            <img src="../../../assets/logos/kycontract.png" alt="Image" height="50" class="mb-3">
+            <div class="text-900 text-3xl font-medium mb-3">Complete KYContract</div>
+            <span class="text-600 font-medium line-height-3">Have you verified your contract/s?</span>
+            <a class="font-medium no-underline ml-2 text-blue-500 cursor-pointer" href="https://polygonscan.com/login?ref=verifyContract" target="_blank">Verify on Polyscan!</a>
+        </div>
+    
+        <div>
+            <label for="submittor" class="block text-900 font-medium mb-2">Submittor</label>
+            <input id="submittor" type="text" placeholder="0x....." pInputText class="w-full mb-3" formControlName="submittorAddress">
+    
+            <label for="entityName" class="block text-900 font-medium mb-2">Entity Name</label>
+            <input id="entityName" type="text" placeholder="Business name" pInputText class="w-full mb-3" formControlName="entityName">
+
+            <label for="maxOnrampAmount" class="block text-900 font-medium mb-2">Max on-ramp amount</label>
+            <input id="maxOnrampAmount" type="number" placeholder="Max on-ramp amount" pInputText class="w-full mb-3" formControlName="maxOnrampAmount">
+
+            <label for="maxOfframpAmount" class="block text-900 font-medium mb-2">Max off-ramp amount</label>
+            <input id="maxOfframpAmount" type="number" placeholder="0x....." pInputText class="w-full mb-3" formControlName="maxOfframpAmount">
+
+            <label for="location" class="block text-900 font-medium mb-2">Location</label>
+            <input id="location" type="text" placeholder="Business Location" pInputText class="w-full mb-3" formControlName="location">
+
+            <div class="flex align-items-center justify-content-between mb-6">
+                <div class="flex align-items-center">
+                    <label for="rememberme1" class="text-900">** All fields are manditory</label>
+                </div>
+            </div>
+    
+            <button pButton pRipple label="Submit" icon="pi pi-check-square" class="w-full" type="submit"></button>
+        </div>
+    </div>
+</form>
+
